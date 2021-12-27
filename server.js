@@ -10,7 +10,9 @@ const productRoutes = require("./routes/productRoutes");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: process.env.FRONT_URL
+}));
 
 app.use("/user", userRoutes);
 app.use("/product", productRoutes);
