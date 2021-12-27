@@ -15,4 +15,4 @@ app.use(cors());
 app.use("/user", userRoutes);
 app.use("/product", productRoutes);
 
-app.listen(PORT_SERVER, () => console.log(`Listening in port ${PORT}`));
+app.listen(PORT, () => console.log(`Listening in port ${PORT}`));
