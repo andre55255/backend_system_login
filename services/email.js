@@ -4,6 +4,7 @@ async function send(emailDest, subject, bodyText, bodyHtml) {
     let transporter = nodemailer.createTransport({
         host: process.env.SMTP_OUTLOOK || "",
         port: process.env.PORT_OUTLOOK || "",
+        secure: true,
         auth: {
             user: process.env.USER_OUTLOOK || "",
             pass: process.env.PASS_OUTLOOK || ""
